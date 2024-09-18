@@ -3,18 +3,20 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class Player6 extends GamePiece{
+public class Chest extends GamePiece{
 		private int loc;
-	public Player6(char symbol, String label, int location) {
+    private char sym;
+    private String lab;
+	public Chest(char symbol, String label, int location) {
 		super(symbol, label, location);
-		// TODO Auto-generated constructor stub
+		sym = symbol;
+    lab = label;
 		loc = getLocation();
 	}
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		return InteractionResult.GET_POINT;
 	}
 
 }
