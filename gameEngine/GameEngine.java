@@ -7,18 +7,18 @@ import levelPieces.LevelSetup;
 
 /**
  * Framework for LevelGame.
- * 
+ *
  * @author Mark Baldwin
  * @author Cyndi Rader
- * 
- * 
+ *
+ *
  *
  */
 
 public class GameEngine {
 	/**
 	 * Determines the size of the game board.
-	 * 
+	 *
 	 * Board is a 1D structure. It is an odd number so player can start exactly in
 	 * the middle if desired.
 	 */
@@ -44,7 +44,7 @@ public class GameEngine {
 
 	/**
 	 * Driver for the game. Creates game and plays it.
-	 * 
+	 *
 	 * @param args Unused
 	 */
 	public static void main(String[] args) {
@@ -68,7 +68,7 @@ public class GameEngine {
 		player = new Player(0);
 
 		displayInstructions() ;
-		
+
 		// play through the levels until all done or player dies
 		while (currentLevel < NUM_LEVELS && !player.isDead()) {
 			currentLevel++;
@@ -88,20 +88,20 @@ public class GameEngine {
 
 	/**
 	 * Display the instructions
-	 * 
+	 *
 	 * @param gameBoard - board so we know what pieces to display info on
 	 */
 	private void displayInstructions() {
 		System.out.println("* The Game KerPlop *");
 		System.out.println("The object of the game is to capture prizes without being killed.");
-		System.out.println("You need " + Player.POINTS_TO_ADVANCE + 
+		System.out.println("You need " + Player.POINTS_TO_ADVANCE +
 				" points to advance, you die after " + Player.POINTS_TO_DIE + " hits.") ;
 	}
-	
+
 
 	/**
 	 * Plays the game for one level.
-	 * 
+	 *
 	 * During each round, the board is displayed, the player enters a movement
 	 * option, the player's location is updated, then the player interacts with any
 	 * pieces in the interactingPieces list. Moveable piece locations are then
@@ -123,7 +123,7 @@ public class GameEngine {
 	/**
 	 * Should be called at the beginning of every level (including beginning of
 	 * program) to set up the data for that level.
-	 * 
+	 *
 	 * @param levelNum The number of the level to be loaded. Level number should be
 	 *                 from 1 to GameEngine.NUM_LEVELS
 	 */
@@ -213,7 +213,7 @@ public class GameEngine {
 	 * Determines if this level is complete. Will be complete if player is advancing
 	 * (either by interaction with a game piece or accumulating points) or dead
 	 * (either by interaction with a game piece or accumulating too many hits).
-	 * 
+	 *
 	 * @return true if player advances or was killed, false otherwise
 	 */
 	public boolean levelFinished() {
