@@ -15,7 +15,7 @@ public class Lilypad implements Drawable{
 
   @Override
   public void draw() {
-    System.out.println(sym);
+    System.out.print(sym);
   }
 
 

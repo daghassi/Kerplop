@@ -47,7 +47,7 @@ public class LevelSetup {
 		System.out.println("Level 1: Legend");
 		
 		
-		Lilypad l1 = new Lilypad('L', "Does nothing", 1);
+		Lilypad l1 = new Lilypad('L', "Does nothing", 18);
 		gameBoard[1] = l1;
 		
 		Frog f1 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
