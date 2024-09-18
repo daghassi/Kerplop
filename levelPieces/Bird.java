@@ -17,17 +17,22 @@ public class Bird extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-      int direction = 1;
+            if (playerLocation == loc) {
+        return InteractionResult.HIT;
+      }
+		return null;
+	}
+
+  @Override
+  public Moveable move(Drawable[] gameBoard, int playerLocation) {
+    int direction = 1;
       if(gameBoard[loc + 2] != null) {
         loc += (2 * direction);
       } else {
           direction = -1;
       }
 
-      if (playerLocation == loc) {
-        return InteractionResult.HIT;
-      }
-		return null;
-	}
+
+  }
 
 }
