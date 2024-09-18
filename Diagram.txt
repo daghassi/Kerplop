@@ -2,6 +2,91 @@
 skinparam classAttributeIconSize 0
 
 
+Class GameEngine {
+  -int BOARD_SIZE
+  -int NUM_LEVELS
+  -int currentLevel
+  -levelSetup levelData
+  -drawable[] gameBoard
+  -moveable[] movingPieces
+  -gamePiece[] interactingPieces
+  -Player player
+  
+  +void main()
+  +GameEngine()
+  +void playGame()
+  +void displayInstructions()
+  +void playLevel()
+  +void setupLevel(int levelNum)
+  +void displayBoard()
+  +void movePieces()
+  +void interaction()
+  +bool levelFinished()
+}
+
+Class GamePiece {
+  #char symbol
+  -String label
+  -int location
+  
+  +GamePiece(char symbol, String label, int location)
+  +void draw()
+  +abstract interactionResult(Drawable[] GameBoard, int playerLocation)
+  +int getLocation
+  +void setLocation(int newLocation)
+  +String toString()
+}
+
+Class Drawable {
+  +void draw()
+}
+
+Drawable <|.. GamePiece
+
+Class Frog {
+  -int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+  +void move(Drawable[] GameBoard, int playerLocation)
+}
+
+Class Bird {
+  -int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+  +void move(Drawable[] GameBoard, int playerLocation)
+}
+
+Class Cactus {
+-int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+}
+
+Class Chest {
+-int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+}
+
+Class DartBlower {
+-int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+}
+
+Class Queen {
+-int loc
+  -char sym
+  -String lab
+  +interactionResult interact(Drawable[] GameBoard, int playerLocation)
+}
+
 GamePiece <|-- Frog
 GamePiece <|-- Bird
 GamePiece <|-- Cactus
@@ -9,20 +94,58 @@ GamePiece <|-- Chest
 GamePiece <|-- DartBlower
 GamePiece <|-- Queen
 
-Class Lilypad
+Class Lilypad {
+-int loc
+  -char sym
+  -String lab
+}
+
+Drawable <|-- Lilypad
 
 Moveable <|.. Frog
 Moveable <|.. Bird
 
-Lilypad : #Drawable
-Frog : #Drawable
-Bird : #Drawable
-Cactus : #Drawable
-Chest : #Drawable
-DartBlower : #Drawable
-Queen : #Drawable
+Class Moveable {
+  +void move(Drawable[] gameBoard, int playerLocation)
+}
 
+InteractionResult <|.. GamePiece
+Class InteractionResult << enum >> {
+  +HIT
+  +KILL
+  +ADVANCE
+  +GET_POINT
+  +NONE
+}
 
+Class player {
+  +int POINTS_TO_DIE
+  +int POINTS_TO_ADVANCE
+  -int location
+  -int levelPoints
+  -int damagePoints
+  -char symbol
+  -playerStatus playerStatus
+  -scanner Scanner
+  
+  +player(int location)
+  +void resetLevel(int location)
+  +bool canAdvance()
+  +bool isDead()
+  +void addPoints()
+  +void takeDamage()
+  +void killed()
+  +void wonAdvance()
+  +void doMove(Drawable[] gameBoard)
+  -int playerChoice()
+}
+Class playerStatus << enum >> {
+  +DEAD
+  +ADVANCING
+  +OK
+}
+
+player <|-- playerStatus
 
 
 @enduml
