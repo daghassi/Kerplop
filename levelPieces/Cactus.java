@@ -2,6 +2,7 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Player;
 
 public class Cactus extends GamePiece{
 		private int loc;
@@ -16,10 +17,9 @@ public class Cactus extends GamePiece{
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-    if (Player.getLocation() == loc) {
-      InteractionResult.HIT;
+    if (playerLocation == loc) {
+      return gameEngine.InteractionResult.HIT;
     }
-		return null;
 	}
 
 }

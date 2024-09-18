@@ -47,74 +47,82 @@ public class LevelSetup {
 		System.out.println("Level 1: Legend");
 		
 		
-		Player1 p1 = new Player1('A', "Does something", 1);
+		Lilypad l1 = new Lilypad('L', "Does nothing", 1);
 		moveableList.clear();
-		gameBoard[p1.getLocation()] = p1;
+		gameBoard[1] = l1;
 		
 		Frog f1 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
 		moveableList.clear();
 		gameBoard[f1.getLocation()] = f1;
 		
-		Player3 p3 = new Player3('C', "Does something", 3);
+		DartBlower d1 = new DartBlower('D', "If there are two spaces or closer it will shoot and kill", 9);
 		moveableList.clear();
-		gameBoard[p3.getLocation()] = p3;
+		gameBoard[d1.getLocation()] = d1;
 		
-		Player4 p4 = new Player4('D', "Does something", 4);
+		Chest c1 = new Chest('C', "Gives a point", 14);
 		moveableList.clear();
-		gameBoard[p4.getLocation()] = p4;
+		gameBoard[c1.getLocation()] = c1;
 		
-		Queen p5 = new Queen('E', "Does something", 5);
+		Queen q1 = new Queen('Q', "When arrived at the Queen the player advances", 5);
 		moveableList.clear();
-		gameBoard[p5.getLocation()] = p5;
+		gameBoard[q1.getLocation()] = q1;
 		
-		Player6 p6 = new Player6('F', "Does something", 6);
+		Cactus ca1 = new Cactus('A', "Hits the player when they step on it", 6);
 		moveableList.clear();
-		gameBoard[p6.getLocation()] = p6;
-		
+		gameBoard[ca1.getLocation()] = ca1;
 
-		System.out.println(p1);
+		Bird b1 = new Bird('B', "Flies two squares at a time and hits of on the same square", 11);
+
+		System.out.println(l1);
 		System.out.println(f1);
-		System.out.println(p3);
-		System.out.println(p4);
-		System.out.println(p5);
-		System.out.println(p6);
+		System.out.println(d1);
+		System.out.println(c1);
+		System.out.println(q1);
+		System.out.println(ca1);
+		System.out.println(b1);
 		
 	}
 	
 	public void level2() {
-		Player1 p1 = new Player1('A', "Does something", 1);
-		moveableList.clear();
-		gameBoard[p1.getLocation()] = p1;
-		
-		Frog p2 = new Frog('B', "Does something", 2);
-		moveableList.clear();
-		gameBoard[p2.getLocation()] = p2;
-		
-		Player3 p3 = new Player3('C', "Does something", 3);
-		moveableList.clear();
-		gameBoard[p3.getLocation()] = p3;
-		
-		Player4 p4 = new Player4('D', "Does something", 4);
-		moveableList.clear();
-		gameBoard[p4.getLocation()] = p4;
-		
-		Queen p5 = new Queen('E', "Does something", 5);
-		moveableList.clear();
-		gameBoard[p5.getLocation()] = p5;
-		
-		Player6 p6 = new Player6('F', "Does something", 6);
-		moveableList.clear();
-		gameBoard[p6.getLocation()] = p6;
-		
+
 		System.out.println(" ");
-		System.out.println("Level 1: Legend");
-		System.out.println(p1);
-		System.out.println(p2);
-		System.out.println(p3);
-		System.out.println(p4);
-		System.out.println(p5);
-		System.out.println(p6);
-		
+		System.out.println("Level 2: Legend");
+
+
+		Lilypad l2 = new Lilypad('L', "Does nothing", 1);
+		moveableList.clear();
+		gameBoard[1] = l2;
+
+		Frog f2 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
+		moveableList.clear();
+		gameBoard[f2.getLocation()] = f2;
+
+		DartBlower d2 = new DartBlower('D', "If there are two spaces or closer it will shoot and kill", 9);
+		moveableList.clear();
+		gameBoard[d2.getLocation()] = d2;
+
+		Chest c2 = new Chest('C', "Gives a point", 14);
+		moveableList.clear();
+		gameBoard[c2.getLocation()] = c2;
+
+		Queen q2 = new Queen('Q', "When arrived at the Queen the player advances", 5);
+		moveableList.clear();
+		gameBoard[q2.getLocation()] = q2;
+
+		Cactus ca2 = new Cactus('A', "Hits the player when they step on it", 6);
+		moveableList.clear();
+		gameBoard[ca2.getLocation()] = ca2;
+
+		Bird b2 = new Bird('B', "Flies two squares at a time and hits of on the same square", 11);
+
+		System.out.println(l2);
+		System.out.println(f2);
+		System.out.println(d2);
+		System.out.println(c2);
+		System.out.println(q2);
+		System.out.println(ca2);
+		System.out.println(b2);
+
 	}
 	
 
