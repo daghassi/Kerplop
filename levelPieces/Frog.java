@@ -5,10 +5,13 @@ import gameEngine.InteractionResult;
 
 public class Frog extends GamePiece{
 	private int loc;
+	private char sym;
+	private String lab;
 	public Frog(char symbol, String label, int location) {
 		super(symbol, label, location);
-		// TODO Auto-generated constructor stub
-		loc = getLocation();
+		loc = location;
+		lab = label;
+		sym = symbol;
 	}
 
 	@Override
