@@ -26,10 +26,10 @@ public class Frog extends GamePiece implements Moveable {
 
 		boolean openSpace = false;
 		while (!openSpace) {
-			if (gameBoard[loc++] == null) {
+			if (gameBoard[loc++] != null) {
 				// moves frog to next open spot
 				openSpace = true;
-			} else if (gameBoard[loc + 2] == null) {
+			} else if (gameBoard[loc + 2] != null) {
 				// moves frog to next open spot
 				openSpace = true;
 			}
