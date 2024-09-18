@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class Lilypad extends GamePiece{
+public class Lilypad implements Drawable{
 	private int loc;
   private char sym;
   private String lab;
@@ -14,9 +14,9 @@ public class Lilypad extends GamePiece{
   }
 
   @Override
-	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-    return null;
-	}
+  public void draw() {
+    System.out.println(sym);
+  }
 
 
 }
