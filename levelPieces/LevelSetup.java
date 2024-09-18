@@ -12,7 +12,7 @@ public class LevelSetup {
 	// Arraylist of moving pieces
 	ArrayList<Moveable> moveableList = new ArrayList<>();
 	// Game board
-	Drawable[] gameBoard;
+	Drawable[] gameBoard  = new Drawable[GameEngine.BOARD_SIZE];
 
 	
 	
