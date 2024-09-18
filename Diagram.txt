@@ -1,0 +1,11 @@
+@startuml
+
+Class Lilypad
+
+Frog <|-- GamePiece
+Bird <|-- GamePiece
+
+
+
+@enduml
+
