@@ -20,8 +20,9 @@ public class Queen extends GamePiece{
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if(Math.abs(playerLocation - loc) == 1){
 			System.out.println("You have Reached the Queen!");
+			return InteractionResult.ADVANCE;
 		}
-		return InteractionResult.ADVANCE;
+		return null;
 	}
 
 }

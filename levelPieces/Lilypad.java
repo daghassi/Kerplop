@@ -8,7 +8,7 @@ public class Lilypad implements Drawable{
   private char sym;
   private String lab;
 	public Lilypad(char symbol, String label, int location) {
-	  	loc = location;
+	  loc = location;
       sym = symbol;
       lab = label;
   }
