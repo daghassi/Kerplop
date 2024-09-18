@@ -3,6 +3,7 @@ package levelPieces;
 import java.util.ArrayList;
 
 import gameEngine.Drawable;
+import gameEngine.GameEngine;
 import gameEngine.Moveable;
 
 public class LevelSetup {
@@ -11,7 +12,7 @@ public class LevelSetup {
 	// Arraylist of moving pieces
 	ArrayList<Moveable> moveableList = new ArrayList<>();
 	// Game board
-	Drawable[] gameBoard = new Drawable[21];
+	Drawable[] gameBoard;
 
 	
 	
@@ -34,17 +35,82 @@ public class LevelSetup {
 	}
 	
 	public LevelSetup() {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		interactingList.clear();
 		moveableList.clear();
 	}
 
 	
 	public void level1() {
-		return;
+		Player1 p1 = new Player1("A", "Does something", 1);
+		moveableList.clear();
+		gameBoard[p1.getLoc()] = p1;
+		
+		Player2 p2 = new Player2("B", "Does something", 2);
+		moveableList.clear();
+		gameBoard[p2.getLoc()] = p2;
+		
+		Player3 p3 = new Player3("C", "Does something", 3);
+		moveableList.clear();
+		gameBoard[p3.getLoc()] = p3;
+		
+		Player4 p4 = new Player4("D", "Does something", 4);
+		moveableList.clear();
+		gameBoard[p4.getLoc()] = p4;
+		
+		Player5 p5 = new Player5("E", "Does something", 5);
+		moveableList.clear();
+		gameBoard[p5.getLoc()] = p5;
+		
+		Player6 p6 = new Player6("F", "Does something", 6);
+		moveableList.clear();
+		gameBoard[p6.getLoc()] = p6;
+		
+		System.out.println(" ");
+		System.out.println("Level 1: Legend");
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(p3);
+		System.out.println(p4);
+		System.out.println(p5);
+		System.out.println(p6);
+		
 	}
 	
 	public void level2() {
-		return;
+		Player1 p1 = new Player1("A", "Does something", 1);
+		moveableList.clear();
+		gameBoard[p1.getLoc()] = p1;
+		
+		Player2 p2 = new Player2("B", "Does something", 2);
+		moveableList.clear();
+		gameBoard[p2.getLoc()] = p2;
+		
+		Player3 p3 = new Player3("C", "Does something", 3);
+		moveableList.clear();
+		gameBoard[p3.getLoc()] = p3;
+		
+		Player4 p4 = new Player4("D", "Does something", 4);
+		moveableList.clear();
+		gameBoard[p4.getLoc()] = p4;
+		
+		Player5 p5 = new Player5("E", "Does something", 5);
+		moveableList.clear();
+		gameBoard[p5.getLoc()] = p5;
+		
+		Player6 p6 = new Player6("F", "Does something", 6);
+		moveableList.clear();
+		gameBoard[p6.getLoc()] = p6;
+		
+		System.out.println(" ");
+		System.out.println("Level 1: Legend");
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(p3);
+		System.out.println(p4);
+		System.out.println(p5);
+		System.out.println(p6);
+		
 	}
 	
 
