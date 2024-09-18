@@ -2,8 +2,9 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
-public class Bird extends GamePiece implements Moveable{
+public class Bird extends GamePiece implements Moveable {
 	private int loc;
   private char sym;
   private String lab;
