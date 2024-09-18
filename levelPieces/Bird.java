@@ -2,8 +2,9 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
-public class Bird extends GamePiece implements Moveable{
+public class Bird extends GamePiece implements Moveable {
 	private int loc;
   private char sym;
   private String lab;
@@ -16,7 +17,7 @@ public class Bird extends GamePiece implements Moveable{
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-      private int direction = 1;
+      int direction = 1;
       if(gameBoard[loc + 2] != null) {
         loc += (2 * direction);
       } else {
