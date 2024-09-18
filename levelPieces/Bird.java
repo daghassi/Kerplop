@@ -5,9 +5,12 @@ import gameEngine.InteractionResult;
 
 public class Bird extends GamePiece implements Moveable{
 	private int loc;
+  private char sym;
+  private String lab;
 	public Bird(char symbol, String label, int location) {
 		super(symbol, label, location);
-		
+		sym = symbol;
+    lab = label;
 		loc = getLocation();
 	}
 
@@ -19,7 +22,11 @@ public class Bird extends GamePiece implements Moveable{
       } else {
           direction = -1;
       }
-		return gameEngine.InteractionResult.HIT;
+
+      if (playerLocation == loc) {
+        return InteractionResult.HIT;
+      }
+		return null;
 	}
 
 }

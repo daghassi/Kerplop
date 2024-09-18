@@ -16,7 +16,10 @@ public class Chest extends GamePiece{
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		return InteractionResult.GET_POINT;
+    if (playerLocation == loc) {
+      return InteractionResult.GET_POINT;
+    }
+		return null;
 	}
 
 }
