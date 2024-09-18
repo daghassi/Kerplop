@@ -1,10 +1,21 @@
 package levelPieces;
 
-public class Player1 {
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
 
-	public int getLoc() {
-		// TODO Auto-generated method stub
-		return 0;
+public class Player1 extends GamePiece{
+	private int loc;
+	public Player1(char symbol, String label, int location) {
+		super(symbol, label, location);
+		// TODO Auto-generated constructor stub
+		loc = getLocation();
 	}
+
+	@Override
+	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
