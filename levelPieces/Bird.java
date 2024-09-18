@@ -31,7 +31,7 @@ public class Bird extends GamePiece implements Moveable {
       } else {
           direction = -1;
       }
-
+    return;
 
   }
 
