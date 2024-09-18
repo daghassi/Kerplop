@@ -48,30 +48,32 @@ public class LevelSetup {
 		
 		
 		Lilypad l1 = new Lilypad('L', "Does nothing", 1);
-		moveableList.clear();
 		gameBoard[1] = l1;
 		
 		Frog f1 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
-		moveableList.clear();
+		moveableList.add(f1);
 		gameBoard[f1.getLocation()] = f1;
 		
 		DartBlower d1 = new DartBlower('D', "If there are two spaces or closer it will shoot and kill", 9);
-		moveableList.clear();
+		interactingList.add(d1);
 		gameBoard[d1.getLocation()] = d1;
 		
 		Chest c1 = new Chest('C', "Gives a point", 14);
-		moveableList.clear();
+		interactingList.add(c1);
 		gameBoard[c1.getLocation()] = c1;
 		
 		Queen q1 = new Queen('Q', "When arrived at the Queen the player advances", 5);
-		moveableList.clear();
+		interactingList.add(q1);
 		gameBoard[q1.getLocation()] = q1;
 		
 		Cactus ca1 = new Cactus('A', "Hits the player when they step on it", 6);
-		moveableList.clear();
+		interactingList.add(ca1);
 		gameBoard[ca1.getLocation()] = ca1;
 
 		Bird b1 = new Bird('B', "Flies two squares at a time and hits of on the same square", 11);
+    moveableList.add(b1);
+    interactingList.add(b1);
+    gameBoard[b1.getLocation()] = b1;
 
 		System.out.println(l1);
 		System.out.println(f1);
@@ -90,30 +92,32 @@ public class LevelSetup {
 
 
 		Lilypad l2 = new Lilypad('L', "Does nothing", 1);
-		moveableList.clear();
 		gameBoard[1] = l2;
 
 		Frog f2 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
-		moveableList.clear();
+		moveableList.add(f2);
 		gameBoard[f2.getLocation()] = f2;
 
 		DartBlower d2 = new DartBlower('D', "If there are two spaces or closer it will shoot and kill", 9);
-		moveableList.clear();
+		interactingList.add(d2);
 		gameBoard[d2.getLocation()] = d2;
 
 		Chest c2 = new Chest('C', "Gives a point", 14);
-		moveableList.clear();
+		interactingList.add(c2);
 		gameBoard[c2.getLocation()] = c2;
 
 		Queen q2 = new Queen('Q', "When arrived at the Queen the player advances", 5);
-		moveableList.clear();
+		interactingList.add(q2);
 		gameBoard[q2.getLocation()] = q2;
 
 		Cactus ca2 = new Cactus('A', "Hits the player when they step on it", 6);
-		moveableList.clear();
+		interactingList.add(ca2);
 		gameBoard[ca2.getLocation()] = ca2;
 
 		Bird b2 = new Bird('B', "Flies two squares at a time and hits of on the same square", 11);
+    moveableList.add(b2);
+    interactingList.add(b2);
+    gameBoard[b2.getLocation()] = b2;
 
 		System.out.println(l2);
 		System.out.println(f2);
