@@ -1,11 +1,28 @@
 @startuml
+skinparam classAttributeIconSize 0
+
+
+GamePiece <|-- Frog
+GamePiece <|-- Bird
+GamePiece <|-- Cactus
+GamePiece <|-- Chest
+GamePiece <|-- DartBlower
+GamePiece <|-- Queen
 
 Class Lilypad
 
-Frog <|-- GamePiece
-Bird <|-- GamePiece
+Moveable <|.. Frog
+Moveable <|.. Bird
+
+Lilypad : #Drawable
+Frog : #Drawable
+Bird : #Drawable
+Cactus : #Drawable
+Chest : #Drawable
+DartBlower : #Drawable
+Queen : #Drawable
+
 
 
 
 @enduml
-
