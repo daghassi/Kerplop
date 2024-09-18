@@ -1,0 +1,4 @@
+1. Lilypad - This piece does not move or interact.
+2. Frog - This piece jumps in front of what is in front of it.
+3. Bird - This piece moves 2 spaces until the edge of the board and then turns around.
+4. 
