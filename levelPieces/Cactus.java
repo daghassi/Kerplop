@@ -20,6 +20,7 @@ public class Cactus extends GamePiece{
     if (playerLocation == loc) {
       return gameEngine.InteractionResult.HIT;
     }
+    return null;
 	}
 
 }

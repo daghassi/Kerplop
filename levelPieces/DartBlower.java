@@ -16,7 +16,7 @@ public class DartBlower extends GamePiece{
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (player.getLocation() < loc + 2 || player.getLocation > loc - 2) {
+		if (playerLocation < loc + 2 || playerLocation > loc - 2) {
       return InteractionResult.KILL;
     }
 		return null;

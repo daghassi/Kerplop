@@ -24,7 +24,7 @@ public class Bird extends GamePiece implements Moveable {
 	}
 
   @Override
-  public Moveable move(Drawable[] gameBoard, int playerLocation) {
+  public void move(Drawable[] gameBoard, int playerLocation) {
     int direction = 1;
       if(gameBoard[loc + 2] != null) {
         loc += (2 * direction);
