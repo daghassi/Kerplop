@@ -63,7 +63,7 @@ public class LevelSetup {
 		moveableList.clear();
 		gameBoard[p4.getLocation()] = p4;
 		
-		Player5 p5 = new Player5('E', "Does something", 5);
+		Queen p5 = new Queen('E', "Does something", 5);
 		moveableList.clear();
 		gameBoard[p5.getLocation()] = p5;
 		
@@ -98,7 +98,7 @@ public class LevelSetup {
 		moveableList.clear();
 		gameBoard[p4.getLocation()] = p4;
 		
-		Player5 p5 = new Player5('E', "Does something", 5);
+		Queen p5 = new Queen('E', "Does something", 5);
 		moveableList.clear();
 		gameBoard[p5.getLocation()] = p5;
 		
