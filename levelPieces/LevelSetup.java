@@ -51,9 +51,9 @@ public class LevelSetup {
 		moveableList.clear();
 		gameBoard[p1.getLocation()] = p1;
 		
-		Player2 p2 = new Player2('B', "Does something", 2);
+		Frog f1 = new Frog('F', "Jumps one square at a time can jump jump over any obstacle", 2);
 		moveableList.clear();
-		gameBoard[p2.getLocation()] = p2;
+		gameBoard[f1.getLocation()] = f1;
 		
 		Player3 p3 = new Player3('C', "Does something", 3);
 		moveableList.clear();
@@ -86,7 +86,7 @@ public class LevelSetup {
 		moveableList.clear();
 		gameBoard[p1.getLocation()] = p1;
 		
-		Player2 p2 = new Player2('B', "Does something", 2);
+		Frog p2 = new Frog('B', "Does something", 2);
 		moveableList.clear();
 		gameBoard[p2.getLocation()] = p2;
 		
