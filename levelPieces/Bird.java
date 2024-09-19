@@ -26,11 +26,15 @@ public class Bird extends GamePiece implements Moveable {
   @Override
   public void move(Drawable[] gameBoard, int playerLocation) {
     int direction = 1;
-      if(gameBoard[loc + 2] != null) {
-        loc += (2 * direction);
-      } else {
-          direction = -1;
-      }
+    if (loc >= gameBoard.length - 2) {
+      direction = -1;
+    }
+    int newLoc = (loc + (2*direction));
+    if (gameBoard[newLoc] == null) {
+      gameBoard[newLoc] = gameBoard[loc];
+      gameBoard[loc] = null;
+      loc = newLoc;
+    }
     return;
 
   }
