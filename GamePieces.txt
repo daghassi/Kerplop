@@ -1,4 +1,7 @@
 1. Lilypad - This piece does not move or interact.
 2. Frog - This piece jumps in front of what is in front of it.
 3. Bird - This piece moves 2 spaces until the edge of the board and then turns around.
-4. 
+4. Cactus - This piece hits you when you step on it
+5. Chest - This piece gives you a point when you open it(go over it)
+6. DartBlower - This piece hits you when you are within two spaces on either side of it
+7. Queen - This piece advances you to the next level when you meet it (one space on each side)

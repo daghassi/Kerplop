@@ -28,6 +28,8 @@ public class Bird extends GamePiece implements Moveable {
     int direction = 1;
     if (loc >= gameBoard.length - 2) {
       direction = -1;
+    } else if (loc <= 2) {
+      direction = 1;
     }
     int newLoc = (loc + (2*direction));
     if (gameBoard[newLoc] == null) {

@@ -23,20 +23,18 @@ public class Frog extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-
-		boolean openSpace = false;
-		while (!openSpace) {
-			if (gameBoard[loc++] == null) {
-				// moves frog to next open spot
-				openSpace = true;
-			} else if (gameBoard[loc + 2] == null) {
-				// moves frog to next open spot
-				openSpace = true;
-			}
+      int newLoc = 0;
+      if (loc + 1 < gameBoard.length) {
+        newLoc = loc + 1;
+      }
+      if (gameBoard[newLoc] == null) {
+      gameBoard[newLoc] = gameBoard[loc];
+      gameBoard[loc] = null;
+      loc = newLoc;
+    }
 			return;
 
 		}
 	}
-}
 
 
