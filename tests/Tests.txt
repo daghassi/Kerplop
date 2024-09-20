@@ -1,0 +1,7 @@
+bird: Have it move two pieces and have it predict where it moves
+frog: have it jump over players and test if it works
+queen: have the player go next to it and see if it advances to the next level
+Cactus: have the player step on it and test to see if it hits
+Chest: have the player open it and see if it gives points
+Dartblower: have the player be in its range and see if it kills
+Dartblower: have the player be out of range and make sure it does not kill
