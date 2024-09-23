@@ -22,5 +22,17 @@ public void testBird() {
 
 @Test
 public void testFrog() {
-  
+  Drawable[] gameBoard = new Drawable[10];
+  Frog frog = new Frog('F', "Frog", 4)
+  gameBoard[4] = frog;
+  frog.move(gameBoard, 0);
+  // Test for moving the frog to a new spot and nullifying the old one
+  assertNull(gameBoard[4]);
+  assertEquals(frog, gameBoard[5]);
+
+  Frog frog2 = new Frog('F', "Frog", 9);
+  gameBoard[9] = frog2;
+  frog.move(gameBoard, 0);
+  // Test for boundary case
+  assertEquals(frog, gameBoard[9]);
 }
